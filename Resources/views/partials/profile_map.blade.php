@@ -1,4 +1,4 @@
-{{-- Profile tab "Flugkarte": visited vs. still-open airports of the GSG network. Expects $user. --}}
+{{-- Profile tab "Flugkarte": visited vs. still-open airports of the Nexus Air network. Expects $user. --}}
 @php($ufmKey = trim((string) (setting('acars.carto_api_key', env('CARTO_API_KEY', '')) ?? '')))
 <style>
   .fmp-card { border:0; border-radius:16px; overflow:hidden; background:#0b0f17; box-shadow:0 10px 40px rgba(0,0,0,.35); }

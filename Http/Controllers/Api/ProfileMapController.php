@@ -16,7 +16,7 @@ class ProfileMapController extends Controller
 {
     /**
      * Profile tab: where has this pilot been (accepted PIREPs, dep or arr) and
-     * which airports of the GSG network are still open. "Network" = every
+     * which airports of the Nexus Air network are still open. "Network" = every
      * airport that appears in an active flight of the schedule.
      */
     public function profile(Request $request, int $id): JsonResponse
@@ -116,7 +116,7 @@ class ProfileMapController extends Controller
                 'ac.icao as type', 'ac.registration as reg',
             ]);
 
-        // GSG runs with CACHE_DRIVER=null, so use the file store explicitly. A finished
+        // Nexus Air runs with CACHE_DRIVER=null, so use the file store explicitly. A finished
         // flight's track never changes -> cache the thinned track per flight (forever).
         $store = Cache::store('file');
         $ids = $flights->pluck('id')->all();
